@@ -1,0 +1,326 @@
+/* General Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body, html {
+font-family: 'Arial', sans-serif;
+scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+header {
+background-color: #1a1a1d;
+color: #fff;
+width: 100%;
+z-index: 10;
+position: fixed;
+top: 0;
+left: 0;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+}
+
+.nav-brand h1 {
+font-size: 1.5rem;
+font-weight: bold;
+cursor: pointer;
+color: #f0a500;
+margin-right: 2rem;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+}
+
+.nav-links li {
+margin-left: 20px;
+}
+
+.nav-links a {
+color: #fff;
+text-decoration: none;
+padding: 8px 16px;
+transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+background-color: #f0a500;
+color: #1a1a1d;
+border-radius: 5px;
+}
+
+/* Toggle Button for Mobile */
+.toggle-btn {
+display: none;
+font-size: 24px;
+background: none;
+border: none;
+color: #f0a500;
+cursor: pointer;
+transition: transform 0.3s;
+}
+
+.toggle-btn:hover {
+transform: rotate(90deg);
+}
+
+/* Sidebar for Mobile */
+.sidebar {
+position: fixed;
+top: 0;
+left: -100%;
+width: 250px;
+height: 100%;
+background-color: #333;
+color: white;
+transition: left 0.4s ease;
+padding-top: 2rem;
+z-index: 9;
+}
+
+.sidebar ul {
+list-style: none;
+padding: 0;
+}
+
+.sidebar ul li {
+padding: 15px 20px;
+}
+
+.sidebar ul li a {
+color: white;
+text-decoration: none;
+font-size: 1.1rem;
+}
+
+.sidebar ul li a:hover {
+color: #f0a500;
+}
+
+.sidebar-open {
+left: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+.nav-links {
+display: none;
+}
+
+.toggle-btn {
+display: inline;
+}
+}
+/* Card container */
+.card-container {
+display: flex;
+gap: 50px;
+flex-wrap: wrap;
+justify-content: center;
+margin: 25px;
+}
+
+/* Individual card styling */
+.card {
+background-color: #ffffff;
+border-radius: 15px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+overflow: hidden;
+width: 300px;
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+}
+
+/* Image styling */
+.card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+/* Hover effect on card */
+.card:hover {
+transform: translateY(-10px);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover img {
+transform: scale(1.1);
+}
+
+/* Card content styling */
+.card-content {
+padding: 20px;
+}
+
+.card-content h3 {
+margin: 0;
+font-size: 1.5em;
+color: #333;
+}
+
+.card-content p {
+font-size: 1em;
+color: #666;
+margin: 10px 0;
+line-height: 1.6;
+}
+
+/* Button styling */
+.card-content a {
+display: inline-block;
+margin-top: 15px;
+padding: 10px 20px;
+text-decoration: none;
+color: #ffffff;
+background-color: #3498db;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.card-content a:hover {
+background-color: #2980b9;
+}
+
+/* Hero Section */
+.hero {
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./h1_hero.png') no-repeat center center/cover;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;
+transition: all 0.5s ease;
+}
+
+.hero h2 {
+font-size: 3rem;
+margin-bottom: 1rem;
+animation: slideInFromLeft 1s ease forwards;
+}
+
+.hero p {
+font-size: 1.2rem;
+animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+from { transform: translateX(-100%); opacity: 0; }
+to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+/* Calculator Section */
+.calculator {
+padding: 4rem 2rem;
+text-align: center;
+background-color: #f4f4f4;
+color: #333;
+}
+
+.calculator h2 {
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
+}
+.services h1{
+font-size: 50px;
+text-align: center;
+margin: 20px;
+}
+
+.calculator input, .calculator button {
+padding: 10px;
+margin: 10px 0;
+font-size: 1rem;
+border-radius: 5px;
+border: none;
+}
+
+button {
+background-color: #f0a500;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+background-color: #e09100;
+transform: scale(1.05);
+}
+
+/* Membership Form */
+.membership-form {
+padding: 4rem 2rem;
+text-align: center;
+background-color: #1a1a1d;
+color: white;
+}
+
+.membership-form h2 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+
+.membership-form form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.membership-form input, .membership-form textarea {
+padding: 12px;
+width: 80%;
+max-width: 500px;
+margin: 8px 0;
+border: none;
+border-radius: 5px;
+}
+
+/* Membership Form */
+.membership-form button {
+background-color: #f0a500; /* Bright color for visibility */
+color: #fff; /* White text for contrast */
+padding: 12px 24px; /* Adequate padding for better size */
+border: none; /* No border */
+border-radius: 5px; /* Rounded corners */
+font-size: 1.1rem; /* Slightly larger font */
+cursor: pointer; /* Pointer on hover */
+transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the membership button */
+.membership-form button:hover {
+background-color: #e09100; /* Darker shade on hover */
+transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Membership Form Button (Active State) */
+.membership-form button:active {
+transform: scale(0.95); /* Scale down on click for feedback */
+}
+
+
+/* Footer */
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 1.5rem;
+}
